@@ -26,6 +26,8 @@ The hero feature keeps its own separate steaming glass pan clip, so it is not re
 ## Playback behavior
 
 - Product embeds use Cloudinary's hosted player iframe with autoplay, muted, loop and controls disabled.
+- The Cloudinary player also receives `player[playsinline]=true`, which requests inline playback on iOS and supports muted autoplay without forcing fullscreen.
+- The iframe grants autoplay permission through `allow="autoplay; encrypted-media"`. Muted autoplay is requested on all screen sizes, but cannot be guaranteed when a browser or device blocks autoplay (for example, Low Power Mode or data-saving restrictions).
 - The iframe crop is applied by sizing and positioning the player inside the clipped frame; the frame itself keeps its intended dimensions.
 - Video surfaces do not intercept clicks; product controls remain usable.
 - Lazy loading remains enabled for product cards below the fold.

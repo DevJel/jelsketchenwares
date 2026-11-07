@@ -57,3 +57,7 @@ python3 scripts/verify_app.py
 ```
 
 These checks verify basic document structure and embedded JavaScript syntax. They are not a substitute for browser interaction tests, dependency vulnerability scanning, or a security review. The Storefront checks workflow runs them on pushes and pull requests with read-only repository access. The existing Jekyll and SLSA workflows remain unchanged; the latter currently generates placeholder artifacts, not storefront release provenance, and requires review before relying on its output.
+
+## Planned dashboards and backend
+
+See the [store platform architecture and implementation plan](docs/store-platform-plan.md). It is a proposal; dashboards, sign-in, orders, and media management are not implemented yet.

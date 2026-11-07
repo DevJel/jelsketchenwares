@@ -12,15 +12,14 @@ A clean, modern, responsive storefront for **Jels Kitchenwares**, specializing i
 
 ## Product video behavior
 
-The four Cloudinary product clips remain mapped to the glass pan hero, glass pot, mixing-bowl/storage range, and bake-and-serve/teapot products. Cloudinary player embeds are muted, autoplaying, looping, hidden-control and non-interactive. The iframe fills its card and is enlarged slightly (1.06×) inside the clipped frame.
-
-The three recipe cards intentionally reuse the Glass Pot 3.5L clip, starting at 5%, 38%, and 70% of its duration via Cloudinary's start-offset transformation. Each embed loops its own trimmed segment.
+- The hero keeps its original 4:3 frame and full-frame video fit; the iframe is no longer enlarged or offset inside the frame.
+- The separate four-video strip below the hero has been removed.
+- All six product cards use distinct video sources. No product card reuses another card's clip.
+- Product card frames retain their original 4:3 aspect ratio on desktop and mobile.
 
 ## Product video media
 
-The home-page catalogue includes muted, looping video embeds on all six product cards. A separate responsive showcase below the hero uses four Cloudinary MP4 clips; these play inline without sound, controls, click actions or fullscreen interaction. The hero retains its single large feature video, while the former three small hero video tiles are removed.
-
-See [video media implementation notes](docs/video-media.md) for the source list, layout and playback behavior.
+See [video media implementation notes](docs/video-media.md) for the unique source-to-product assignments and playback behavior.
 
 ## Technology and hosting
 

@@ -10,6 +10,12 @@ A clean, modern, responsive storefront for **Jels Kitchenwares**, specializing i
 - Responsive desktop and mobile layout.
 - Accessible scrolling highlights with reduced-motion support.
 
+## Product video behavior
+
+The four Cloudinary product clips remain mapped to the glass pan hero, glass pot, mixing-bowl/storage range, and bake-and-serve/teapot products. Cloudinary player embeds are muted, autoplaying, looping, hidden-control and non-interactive. The iframe fills its card and is enlarged slightly (1.06×) inside the clipped frame.
+
+The three recipe cards intentionally reuse the Glass Pot 3.5L clip, starting at 5%, 38%, and 70% of its duration via Cloudinary's start-offset transformation. Each embed loops its own trimmed segment.
+
 ## Technology and hosting
 
 - HTML5, CSS3 and a self-contained React export.

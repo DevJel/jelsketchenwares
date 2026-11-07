@@ -16,6 +16,7 @@ A clean, modern, responsive storefront for **Jels Kitchenwares**, specializing i
 - The separate four-video strip below the hero has been removed.
 - All six product cards use distinct video sources. No product card reuses another card's clip.
 - Product card frames retain their original 4:3 aspect ratio on desktop and mobile, with full-bleed centered video cropping.
+- Cloudinary embeds request muted autoplay, looping and inline playback (`playsinline`) for iPhone/iPad compatibility; browser power-saving and autoplay policies can still prevent playback.
 
 ## Product video media
 

@@ -12,10 +12,10 @@ A clean, modern, responsive storefront for **Jels Kitchenwares**, specializing i
 
 ## Product video behavior
 
-- The hero keeps its original 4:3 frame and full-frame video fit; the iframe is no longer enlarged or offset inside the frame.
+- The hero frame uses its original responsive 4:3 proportions without an oversized minimum height; the hosted video is enlarged horizontally and centered inside the clipped frame so it fills the frame without side gaps.
 - The separate four-video strip below the hero has been removed.
 - All six product cards use distinct video sources. No product card reuses another card's clip.
-- Product card frames retain their original 4:3 aspect ratio on desktop and mobile.
+- Product card frames retain their original 4:3 aspect ratio on desktop and mobile, with full-bleed centered video cropping.
 
 ## Product video media
 

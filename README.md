@@ -43,3 +43,16 @@ cd jels-kitchenwares
 ## License
 
 © 2026 Jels Kitchenwares. All rights reserved.
+
+## Implementation and verification notes
+
+The entry point is the supplied self-contained React export: CSS, application JavaScript, and media are bundled inside `index.html`. The editable React project and a dependency lockfile are not included in this repository. Preserve the original export when updating it; meaningful component refactors and dependency audits require its source project.
+
+To run the local checks, install Python 3 and Node.js, then run from the repository root:
+
+```bash
+python3 -m unittest discover -s tests -v
+python3 scripts/verify_app.py
+```
+
+These checks verify basic document structure and embedded JavaScript syntax. They are not a substitute for browser interaction tests, dependency vulnerability scanning, or a security review. The Storefront checks workflow runs them on pushes and pull requests with read-only repository access. The existing Jekyll and SLSA workflows remain unchanged; the latter currently generates placeholder artifacts, not storefront release provenance, and requires review before relying on its output.

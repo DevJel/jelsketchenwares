@@ -1,0 +1,25 @@
+# Verification guidance: ISO MCP SDLC-003, AGENT-009.
+# These checks do not establish ISO certification or full security coverage.
+name: Storefront checks
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - name: Test verification script
+        run: python3 -m unittest discover -s tests -v
+      - name: Verify storefront document and JavaScript syntax
+        run: python3 scripts/verify_app.py

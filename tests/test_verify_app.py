@@ -32,5 +32,15 @@ class VerificationTests(unittest.TestCase):
             self.run_fixture('<!DOCTYPE html><meta name="viewport"><div id="root"></div><script type="module">const = ;</script>')
 
 
+class MarqueeTests(unittest.TestCase):
+    def test_marquee_animation_contract(self):
+        # Structural guard; visual and timing behavior also need browser tests.
+        html = Path("index.html").read_text(encoding="utf-8")
+        self.assertIn("animation:marquee 60s linear infinite", html)
+        self.assertIn("transform:translateX(-50%)", html)
+        self.assertIn(".marquee-track > span{\n  flex-shrink:0;\n  min-width:100vw;", html)
+        self.assertIn("@media (prefers-reduced-motion: reduce)", html)
+
+
 if __name__ == '__main__':
     unittest.main()

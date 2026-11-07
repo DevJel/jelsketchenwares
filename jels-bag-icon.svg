@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="96" fill="#FFFFFF"/>
+  <g fill="none" stroke="#111111" stroke-width="22" stroke-linecap="round" stroke-linejoin="round">
+    <!-- bag body like screenshot -->
+    <path d="M108 178 L138 398 Q141 428 172 428 L340 428 Q371 428 374 398 L404 178 Q406 152 378 152 L134 152 Q106 152 108 178 Z"/>
+    <!-- handle -->
+    <path d="M178 152 V128 Q178 76 256 76 Q334 76 334 128 V152"/>
+  </g>
+</svg>

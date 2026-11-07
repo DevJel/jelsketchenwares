@@ -1844,7 +1844,36 @@ details summary::-webkit-details-marker{
 }
 
 .marquee-track{
-  animation:marquee 26s linear infinite
+  gap:0;
+  animation:marquee 60s linear infinite
+}
+
+.marquee-track > span{
+  flex-shrink:0;
+  min-width:100vw;
+  justify-content:space-between;
+  padding-right:2rem
+}
+
+@media (prefers-reduced-motion: reduce){
+  .marquee-track{
+    width:100%;
+    white-space:normal;
+    animation:none
+  }
+
+  .marquee-track > span{
+    flex:1 1 100%;
+    min-width:0;
+    padding-right:0;
+    flex-wrap:wrap;
+    justify-content:flex-start;
+    gap:.75rem 2rem
+  }
+
+  .marquee-track > span + span{
+    display:none
+  }
 }
 
 /* Non-interactive background videos only — never disable buttons, tabs, cart, or other UI. */

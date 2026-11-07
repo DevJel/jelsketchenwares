@@ -8,6 +8,7 @@ A clean, modern, and responsive e-commerce web interface for **Jels Kitchenwares
 * **Comparative Breakdown:** Side-by-side comparison table evaluating Jels Glass against traditional non-stick and stainless steel alternatives.
 * **Customer Assurances:** Highlights free carbon-neutral delivery over $75$, a 2-year warranty, and a 60-day home trial.
 * **Responsive Design:** Built with a clean aesthetic layout tailored for seamless viewing across desktop and mobile browsers.
+* **Scrolling highlights:** The feature strip loops slowly to the left. When reduced motion is requested, the highlights remain visible without animation.
 
 ## Tech Stack
 

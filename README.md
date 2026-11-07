@@ -16,6 +16,12 @@ The four Cloudinary product clips remain mapped to the glass pan hero, glass pot
 
 The three recipe cards intentionally reuse the Glass Pot 3.5L clip, starting at 5%, 38%, and 70% of its duration via Cloudinary's start-offset transformation. Each embed loops its own trimmed segment.
 
+## Product video media
+
+The home-page catalogue includes muted, looping video embeds on all six product cards. A separate responsive showcase below the hero uses four Cloudinary MP4 clips; these play inline without sound, controls, click actions or fullscreen interaction. The hero retains its single large feature video, while the former three small hero video tiles are removed.
+
+See [video media implementation notes](docs/video-media.md) for the source list, layout and playback behavior.
+
 ## Technology and hosting
 
 - HTML5, CSS3 and a self-contained React export.

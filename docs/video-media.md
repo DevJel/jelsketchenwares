@@ -1,11 +1,12 @@
 # Jels Kitchenwares video media
 
-## Placement and original frame sizing
+## Frame sizing and full-bleed video fit
 
-- The home-page hero retains its original 4:3 media frame, including the existing responsive minimum height.
-- The video iframe fills the frame at 100% width and height with no artificial 116% enlargement or negative offset.
+- The hero uses its original responsive 4:3 frame. Its frame height follows the aspect ratio instead of forcing an oversized minimum height.
+- The six product-card video frames retain their original 4:3 aspect ratio on desktop and mobile.
+- Each frame clips overflow with rounded corners. The Cloudinary player iframe is enlarged horizontally to 133.3334% of the 4:3 frame width, positioned at -16.6667% from the left, and kept at 100% frame height. This gives the embedded 16:9 player a full-bleed crop across the 4:3 frame.
+- The video remains centered and fills the frame; excess horizontal content is cropped rather than leaving black bars or empty side spaces.
 - The separate four-video gallery below the hero has been removed.
-- The six product cards retain their original 4:3 video frames.
 - Product videos are assigned one-to-one: each product card has its own source, with no repeated clip between cards.
 - Video media remains muted, autoplaying, looping and non-interactive. Product details and purchase actions remain separate controls.
 
@@ -25,10 +26,10 @@ The hero feature keeps its own separate steaming glass pan clip, so it is not re
 ## Playback behavior
 
 - Product embeds use Cloudinary's hosted player iframe with autoplay, muted, loop and controls disabled.
-- The iframe uses the complete frame dimensions. The source is not enlarged or cropped by an additional iframe scale.
+- The iframe crop is applied by sizing and positioning the player inside the clipped frame; the frame itself keeps its intended dimensions.
 - Video surfaces do not intercept clicks; product controls remain usable.
 - Lazy loading remains enabled for product cards below the fold.
 
 ## Verification
 
-The repository's existing verification workflow checks the HTML document and embedded JavaScript syntax. Browser testing is still required to confirm the hero and product-card dimensions, video loading, autoplay behavior and mobile layout on target devices. Mobile browsers may apply their own power-saving or autoplay policies.
+The repository's verification workflow checks the HTML document and embedded JavaScript syntax. Browser testing is still required to confirm the hero and product-card dimensions, video loading, autoplay behavior and mobile layout on target devices. Mobile browsers may apply their own power-saving or autoplay policies.

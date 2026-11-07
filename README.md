@@ -1,4 +1,4 @@
-# Jels Kitchenwares
+# Jels Kitchenwares Online Store
 
 A clean, modern, and responsive e-commerce web interface for **Jels Kitchenwares**, specializing in high-clarity Borosilicate 3.3 glass cookware.
 

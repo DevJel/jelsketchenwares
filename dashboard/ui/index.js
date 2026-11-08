@@ -1,0 +1,17 @@
+// Everything a view needs, in one import:  import { Button, Card, ... } from '/dashboard/ui/index.js';
+export { Alert, Notice } from './alert.js';
+export { Avatar } from './avatar.js';
+export { AccountBadge, Badge, StatusBadge, StockBadge, YesNoBadge } from './badge.js';
+export { Button, setLabel, withBusy } from './button.js';
+export { Card } from './card.js';
+export { DescriptionList } from './dl.js';
+export { confirmDialog } from './dialog.js';
+export { EmptyState } from './empty.js';
+export { Checkbox, Field, PasswordField } from './field.js';
+export { ICON_NAMES, Icon } from './icon.js';
+export { PageHeader } from './page.js';
+export { Skeleton } from './skeleton.js';
+export { Stat } from './stat.js';
+export { Stepper } from './stepper.js';
+export { DataTable } from './table.js';
+export { toast } from './toast.js';

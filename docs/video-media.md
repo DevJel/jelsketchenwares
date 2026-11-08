@@ -4,6 +4,7 @@
 
 - The hero uses its original responsive 4:3 frame. Its frame height follows the aspect ratio instead of forcing an oversized minimum height.
 - The six product-card video frames retain their original 4:3 aspect ratio on desktop and mobile.
+- Recipe video frames are square (1:1) on every screen size. Their player iframe is enlarged to 177.7778% width and centered with a -38.8889% left offset, cropping the widescreen player to fill the square frame edge-to-edge.
 - Each frame clips overflow with rounded corners. The Cloudinary player iframe is enlarged horizontally to 133.3334% of the 4:3 frame width, positioned at -16.6667% from the left, and kept at 100% frame height. This gives the embedded 16:9 player a full-bleed crop across the 4:3 frame.
 - The video remains centered and fills the frame; excess horizontal content is cropped rather than leaving black bars or empty side spaces.
 - The separate four-video gallery below the hero has been removed.

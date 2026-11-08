@@ -42,5 +42,14 @@ class MarqueeTests(unittest.TestCase):
         self.assertIn("@media (prefers-reduced-motion: reduce)", html)
 
 
+class MetadataTests(unittest.TestCase):
+    def test_page_has_real_title_and_description(self):
+        html = Path("index.html").read_text(encoding="utf-8")
+        self.assertNotIn("<title>React Artifact</title>", html)
+        self.assertIn("<title>Jels Kitchenwares", html)
+        self.assertIn('<meta name="description" content="Jels Kitchenwares', html)
+        self.assertIn('rel="icon"', html)
+
+
 if __name__ == '__main__':
     unittest.main()

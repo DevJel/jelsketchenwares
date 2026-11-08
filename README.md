@@ -206,7 +206,7 @@ Screenshots above are refreshed with every visual update (`node --no-warnings sc
 - The separate four-video strip below the hero has been removed.
 - All six product cards use distinct video sources. No product card reuses another card's clip.
 - Product card frames retain their original 4:3 aspect ratio on desktop and mobile, with full-bleed centered video cropping.
-- Cloudinary embeds request muted autoplay, looping and inline playback (`playsinline`) for iPhone/iPad compatibility; browser power-saving and autoplay policies can still prevent playback.
+- Clips are native muted, looping, inline (`playsinline`) videos delivered from Cloudinary. They play only while on screen, show a still frame first, and start on the first tap if the phone blocks autoplay (for example iPhone Low Power Mode). If a clip cannot load, it falls back to the Cloudinary player. See [video media notes](docs/video-media.md).
 
 ## Product video media
 

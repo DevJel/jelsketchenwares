@@ -51,5 +51,26 @@ class MetadataTests(unittest.TestCase):
         self.assertIn('rel="icon"', html)
 
 
+class VideoPlaybackTests(unittest.TestCase):
+    """Structural guards for phone autoplay. Real playback needs a browser or device."""
+
+    def setUp(self):
+        self.html = Path("index.html").read_text(encoding="utf-8")
+
+    def test_uses_native_muted_inline_looping_video(self):
+        for token in ('o("video",{key:attempt', "muted:!0", "loop:!0", "playsInline:!0", 'objectFit:"cover"'):
+            self.assertIn(token, self.html)
+
+    def test_plays_when_visible_and_recovers_after_a_touch(self):
+        self.assertIn("new IntersectionObserver((list)=>list.forEach", self.html)
+        self.assertIn('gestures=["touchend","pointerup","click","keydown"]', self.html)
+        self.assertIn('document.addEventListener("visibilitychange",onVis)', self.html)
+
+    def test_falls_back_to_the_cloudinary_player(self):
+        self.assertIn("onError:()=>setAttempt((x)=>x+1)", self.html)
+        self.assertIn('r.searchParams.set("player[autoplay]","true")', self.html)
+        self.assertIn('allow:"autoplay; encrypted-media"', self.html)
+
+
 if __name__ == '__main__':
     unittest.main()

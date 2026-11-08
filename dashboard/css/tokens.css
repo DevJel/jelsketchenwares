@@ -1,0 +1,140 @@
+/* ==========================================================================
+   Design tokens. Change a look here once and both dashboards follow.
+   Light is the default; dark follows the device setting.
+   ========================================================================== */
+:root {
+  color-scheme: light;
+
+  /* Brand */
+  --ink: #1b1a17;
+  --ink-2: #39362e;
+  --muted: #5a564b;
+  --gold: #c49a54;
+  --gold-deep: #7a5718;       /* links, focus, selected states (7:1 on cream) */
+  --gold-soft: rgba(196, 154, 84, 0.2);
+  --gold-line: rgba(196, 154, 84, 0.5);
+  --on-gold: #ffffff;
+
+  /* Page background and the "aurora" glow behind the glass */
+  --page-1: #f6f0e4;
+  --aurora:
+    radial-gradient(16vmax 16vmax at 84% 26%, rgba(224, 176, 96, 0.7) 0%, rgba(224, 176, 96, 0.4) 55%, transparent 74%),
+    radial-gradient(14vmax 14vmax at 14% 66%, rgba(90, 170, 160, 0.6) 0%, rgba(90, 170, 160, 0.32) 55%, transparent 74%),
+    radial-gradient(46vmax 46vmax at 12% 8%, rgba(214, 170, 96, 0.55), transparent 62%),
+    radial-gradient(42vmax 42vmax at 92% 14%, rgba(110, 175, 165, 0.42), transparent 60%),
+    radial-gradient(50vmax 50vmax at 80% 96%, rgba(210, 120, 110, 0.38), transparent 62%),
+    radial-gradient(40vmax 40vmax at 6% 90%, rgba(140, 140, 215, 0.38), transparent 62%);
+
+  /* Glass: translucent surface + blur. --glass-solid is the fallback when blur is unavailable. */
+  --glass: rgba(255, 255, 255, 0.5);
+  --glass-strong: rgba(255, 255, 255, 0.76);
+  --sheen: linear-gradient(135deg, rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0) 55%);
+  --glass-hover: rgba(255, 255, 255, 0.72);
+  --glass-solid: #fbf8f2;
+  --glass-border: rgba(255, 255, 255, 0.78);
+  --glass-rim: rgba(122, 87, 24, 0.18);
+  --glass-hi: rgba(255, 255, 255, 0.6);
+  --glass-blur: blur(20px) saturate(165%);
+  --line: rgba(90, 70, 30, 0.16);
+  --row-hover: rgba(196, 154, 84, 0.1);
+  --skel-1: rgba(90, 70, 30, 0.08);
+  --skel-2: rgba(90, 70, 30, 0.16);
+  --shadow-1: 0 1px 2px rgba(60, 42, 10, 0.06), 0 10px 28px rgba(60, 42, 10, 0.09);
+  --shadow-2: 0 2px 4px rgba(60, 42, 10, 0.08), 0 20px 48px rgba(60, 42, 10, 0.16);
+
+  /* Controls */
+  --field-bg: rgba(255, 255, 255, 0.85);
+  --field-border: #857c66;
+  --focus-ring: rgba(122, 87, 24, 0.28);
+  --btn-bg: #1b1a17;
+  --btn-fg: #ffffff;
+
+  /* Meaning (text / tinted background / outline) */
+  --ok: #165a2c;     --ok-bg: rgba(52, 168, 96, 0.18);    --ok-line: rgba(52, 168, 96, 0.4);
+  --warn: #7a4500;   --warn-bg: rgba(236, 170, 40, 0.24); --warn-line: rgba(200, 140, 20, 0.5);
+  --bad: #962a24;    --bad-bg: rgba(220, 70, 60, 0.15);   --bad-line: rgba(200, 60, 50, 0.42);
+  --bad-solid: #b9362e;
+  --info: #1c4a74;   --info-bg: rgba(60, 130, 210, 0.16); --info-line: rgba(60, 130, 210, 0.42);
+  --violet: #4a3978; --violet-bg: rgba(130, 100, 210, 0.17); --violet-line: rgba(130, 100, 210, 0.44);
+  --teal: #14564f;   --teal-bg: rgba(40, 170, 155, 0.17); --teal-line: rgba(40, 170, 155, 0.44);
+
+  /* Type, space, shape, motion */
+  --serif: Georgia, 'Times New Roman', serif;
+  --sans: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2.25rem;
+  --r-sm: 10px;
+  --r-md: 16px;
+  --r-lg: 22px;
+  --maxw: 1200px;
+  --gutter: clamp(12px, 3.2vw, 28px);
+  --card-pad: clamp(1rem, 2.4vw, 1.5rem);
+  --nav-w: 236px;
+  --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --dur-fast: 140ms;
+  --dur: 260ms;
+  --dur-slow: 520ms;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --ink: #f3ede1;
+    --ink-2: #d9d1c1;
+    --muted: #bab19f;
+    --gold: #e3bd78;
+    --gold-deep: #e3bd78;
+    --gold-soft: rgba(227, 189, 120, 0.16);
+    --gold-line: rgba(227, 189, 120, 0.4);
+    --on-gold: #1b1a17;
+
+    --page-1: #14110d;
+    --sheen: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0) 55%);
+    --aurora:
+      radial-gradient(16vmax 16vmax at 84% 26%, rgba(224, 176, 96, 0.34) 0%, rgba(224, 176, 96, 0.18) 55%, transparent 74%),
+      radial-gradient(14vmax 14vmax at 14% 66%, rgba(80, 160, 150, 0.3) 0%, rgba(80, 160, 150, 0.16) 55%, transparent 74%),
+      radial-gradient(46vmax 46vmax at 12% 8%, rgba(214, 170, 96, 0.24), transparent 62%),
+      radial-gradient(42vmax 42vmax at 92% 14%, rgba(80, 150, 140, 0.2), transparent 60%),
+      radial-gradient(50vmax 50vmax at 80% 96%, rgba(190, 100, 90, 0.18), transparent 62%),
+      radial-gradient(40vmax 40vmax at 6% 90%, rgba(110, 110, 200, 0.2), transparent 62%);
+
+    --glass: rgba(40, 35, 28, 0.56);
+    --glass-strong: rgba(34, 30, 24, 0.84);
+    --glass-hover: rgba(58, 51, 40, 0.7);
+    --glass-solid: #26211b;
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --glass-rim: rgba(255, 255, 255, 0.16);
+    --glass-hi: rgba(255, 255, 255, 0.07);
+    --line: rgba(255, 240, 210, 0.14);
+    --row-hover: rgba(227, 189, 120, 0.09);
+    --skel-1: rgba(255, 240, 210, 0.07);
+    --skel-2: rgba(255, 240, 210, 0.15);
+    --shadow-1: 0 1px 2px rgba(0, 0, 0, 0.3), 0 10px 28px rgba(0, 0, 0, 0.35);
+    --shadow-2: 0 2px 4px rgba(0, 0, 0, 0.4), 0 20px 48px rgba(0, 0, 0, 0.5);
+
+    --field-bg: rgba(18, 15, 11, 0.62);
+    --field-border: #8f8672;
+    --focus-ring: rgba(227, 189, 120, 0.32);
+    --btn-bg: #e3bd78;
+    --btn-fg: #1b1a17;
+
+    --ok: #86dba0;     --ok-bg: rgba(52, 168, 96, 0.2);     --ok-line: rgba(110, 210, 140, 0.4);
+    --warn: #f3c66e;   --warn-bg: rgba(236, 170, 40, 0.2);  --warn-line: rgba(240, 190, 90, 0.42);
+    --bad: #ffa59c;    --bad-bg: rgba(220, 70, 60, 0.2);    --bad-line: rgba(255, 140, 130, 0.42);
+    --info: #94c7f7;   --info-bg: rgba(60, 130, 210, 0.2);  --info-line: rgba(130, 185, 240, 0.42);
+    --violet: #c8b6f7; --violet-bg: rgba(130, 100, 210, 0.22); --violet-line: rgba(190, 170, 245, 0.42);
+    --teal: #86e0d2;   --teal-bg: rgba(40, 170, 155, 0.2);  --teal-line: rgba(120, 220, 205, 0.42);
+  }
+}
+
+/* No backdrop blur available, or the person asked for less transparency: use solid surfaces. */
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  :root { --glass: var(--glass-solid); --glass-strong: var(--glass-solid); --glass-hover: var(--glass-solid); --glass-blur: none; --sheen: none; }
+}
+@media (prefers-reduced-transparency: reduce) {
+  :root { --glass: var(--glass-solid); --glass-strong: var(--glass-solid); --glass-hover: var(--glass-solid); --glass-blur: none; --sheen: none; }
+}
